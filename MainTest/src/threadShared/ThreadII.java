@@ -10,6 +10,10 @@ public class ThreadII extends Thread {
 	public void run() {
 		a.incrementCounter(); // use in Thread II
 		StaticConcurrentClass.incrementCounter();
+
+		ConcurrentClass b = new ConcurrentClass();
+		int counter = b.getCounter();
+		b.incrementCounter();
 	}
 
 	public void setA(ConcurrentClass a) {
